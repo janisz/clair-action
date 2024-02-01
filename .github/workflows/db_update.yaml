@@ -7,5 +7,5 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      - run: wget -q https://clair-sqlite-db.s3.amazonaws.com/matcher.zst
+      - run: curl https://clair-sqlite-db.s3.amazonaws.com/matcher.zst
       
