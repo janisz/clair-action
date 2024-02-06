@@ -530,3 +530,10 @@ func (ms *sqliteMatcherStore) RecordUpdaterStatus(context.Context, string, time.
 func (ms *sqliteMatcherStore) RecordUpdaterSetStatus(context.Context, string, time.Time) error {
 	return nil
 }
+
+// DeltaUpdateVulnerabilities creates a new UpdateOperation consisting of existing
+// vulnerabilities and new vulnerabilities. It also takes an array of deleted
+// vulnerability names which should no longer be available to query.
+func (ms *sqliteMatcherStore) DeltaUpdateVulnerabilities(ctx context.Context, updater string, fingerprint driver.Fingerprint, vulns []*claircore.Vulnerability, deletedVulns []string) (uuid.UUID, error) {
+	panic("not implemented") // TODO: Implement
+}
